@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Samuel Quirino Advocacia | Direito Empresarial, Tributário e Imobiliário</title>
+  <meta name="description" content="Escritório de advocacia com atuação em Direito Empresarial e Tributário e em Direito Imobiliário, e desenvolvimento de software sob medida para escritórios de advocacia.">
+  <meta name="author" content="Samuel Quirino">
+  <link rel="canonical" href="https://samuelquirino.adv.br/">
+
+  <!-- Open Graph / redes sociais -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Samuel Quirino Advocacia">
+  <meta property="og:title" content="Samuel Quirino Advocacia">
+  <meta property="og:description" content="Atuação em Direito Empresarial e Tributário, Direito Imobiliário e desenvolvimento de software para escritórios de advocacia.">
+  <meta property="og:url" content="https://samuelquirino.adv.br/">
+  <meta property="og:image" content="https://samuelquirino.adv.br/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="theme-color" content="#0F2540" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0E1420" media="(prefers-color-scheme: dark)">
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@500;600&display=swap">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Aplica o tema antes da pintura, para não piscar branco no modo escuro,
+       e sinaliza que o JavaScript está ativo (a animação de entrada só
+       esconde conteúdo se houver JS para revelá-lo de volta). -->
+  <script>
+    (function () {
+      document.documentElement.classList.add('com-js');
+      try {
+        var salvo = localStorage.getItem('sq-tema');
+        var escuro = salvo ? salvo === 'dark'
+          : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', escuro ? 'dark' : 'light');
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ==========================================================
+       CABEÇALHO
+       ========================================================== -->
+  <header class="cabecalho" id="cabecalho">
+    <div class="container cabecalho__inner">
+      <a class="marca" href="#topo" aria-label="Samuel Quirino Advocacia — início">
+        <span class="marca__monograma" aria-hidden="true">SQ</span>
+        <span class="marca__texto">
+          <strong>Samuel Quirino</strong>
+          <span>Advocacia</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav-principal" aria-label="Navegação principal">
+        <ul class="nav__lista">
+          <li><a class="nav__link" href="#sobre">Sobre</a></li>
+          <li><a class="nav__link" href="#areas">Áreas de atuação</a></li>
+          <li><a class="nav__link" href="#legaltech">Legaltech</a></li>
+          <li><a class="nav__link" href="#equipe">Equipe</a></li>
+          <li><a class="nav__link" href="#duvidas">Dúvidas</a></li>
+          <li><a class="nav__link" href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="cabecalho__acoes">
+        <button class="botao-tema" id="botao-tema" type="button"
+                aria-label="Ativar modo escuro" aria-pressed="false">
+          <svg class="icone icone--sol" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.2"/>
+            <path d="M12 2.4v2.6M12 19v2.6M2.4 12h2.6M19 12h2.6M5.2 5.2l1.9 1.9M16.9 16.9l1.9 1.9M18.8 5.2l-1.9 1.9M7.1 16.9l-1.9 1.9"/>
+          </svg>
+          <svg class="icone icone--lua" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1z"/>
+          </svg>
+        </button>
+
+        <button class="hamburguer" id="hamburguer" type="button"
+                aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-principal">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="overlay-menu" id="overlay-menu" hidden></div>
+
+  <main id="conteudo">
+
+    <!-- ========================================================
+         HERO
+         ======================================================== -->
+    <section class="hero" id="topo">
+      <div class="container hero__inner">
+        <p class="olho">Advocacia empresarial, tributária e imobiliária</p>
+
+        <h1 class="hero__titulo">
+          Segurança jurídica para<br class="quebra-md">
+          decisões de <em>negócio</em> e de <em>patrimônio</em>
+        </h1>
+
+        <p class="hero__texto">
+          A Samuel Quirino Advocacia acompanha empresas e proprietários nas operações que
+          exigem análise cuidadosa: estruturação societária, gestão tributária e negócios
+          imobiliários. Trabalhamos de forma preventiva, com acompanhamento próximo de
+          cada caso.
+        </p>
+
+        <div class="hero__acoes">
+          <a class="botao botao--primario" href="#areas">Conhecer as áreas de atuação</a>
+          <a class="botao botao--secundario js-whatsapp" href="#contato"
+             data-assunto="uma orientação jurídica">Falar com o escritório</a>
+        </div>
+
+        <ul class="hero__marcadores">
+          <li>
+            <strong>Direito Empresarial e Tributário</strong>
+            <span>Estrutura societária, contratos e carga tributária</span>
+          </li>
+          <li>
+            <strong>Direito Imobiliário</strong>
+            <span>Compra, venda, locação e regularização</span>
+          </li>
+          <li>
+            <strong>Legaltech</strong>
+            <span>Software sob medida para escritórios</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SOBRE
+         ======================================================== -->
+    <section class="secao" id="sobre">
+      <div class="container secao__grade">
+        <div class="secao__cabecalho js-revelar">
+          <p class="olho">O escritório</p>
+          <h2 class="secao__titulo">Atuação técnica, atendimento direto</h2>
+        </div>
+
+        <div class="prosa js-revelar">
+          <p>
+            A <strong>Samuel Quirino Advocacia</strong> é um escritório de estrutura enxuta,
+            fundado e dirigido pelo advogado <strong>Samuel Quirino</strong>. Nossa atuação se
+            concentra em duas frentes que costumam caminhar juntas na vida de quem empreende:
+            a <strong>empresarial e tributária</strong> e a <strong>imobiliária</strong>.
+          </p>
+          <p>
+            O escritório trabalha com uma premissa simples: a maior parte dos litígios nasce
+            de um documento mal redigido ou de uma decisão tomada sem análise prévia. Por isso
+            damos peso à <strong>atuação preventiva</strong> — revisar antes de assinar, mapear
+            riscos antes de estruturar, entender o negócio antes de opinar sobre ele.
+          </p>
+          <p>
+            Pelo tamanho da equipe, quem contrata o escritório fala diretamente com quem
+            conduz o caso. Cada cliente recebe atualizações periódicas sobre o andamento das
+            demandas, em linguagem acessível.
+          </p>
+        </div>
+
+        <ul class="pilares js-revelar">
+          <li class="pilar">
+            <span class="pilar__numero" aria-hidden="true">01</span>
+            <h3>Análise antes da assinatura</h3>
+            <p>Contratos e operações revisados enquanto ainda há espaço para negociar.</p>
+          </li>
+          <li class="pilar">
+            <span class="pilar__numero" aria-hidden="true">02</span>
+            <h3>Linguagem sem juridiquês</h3>
+            <p>Pareceres e orientações escritos para serem entendidos por quem decide.</p>
+          </li>
+          <li class="pilar">
+            <span class="pilar__numero" aria-hidden="true">03</span>
+            <h3>Acompanhamento próximo</h3>
+            <p>Estrutura enxuta significa contato direto com o advogado responsável.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         ÁREAS DE ATUAÇÃO
+         ======================================================== -->
+    <section class="secao secao--alt" id="areas">
+      <div class="container">
+        <div class="secao__cabecalho secao__cabecalho--centro js-revelar">
+          <p class="olho">Áreas de atuação</p>
+          <h2 class="secao__titulo">Onde o escritório atua</h2>
+          <p class="secao__apoio">
+            Duas frentes principais, com atendimento consultivo e contencioso.
+          </p>
+        </div>
+
+        <div class="areas">
+          <!-- Empresarial / Tributário -->
+          <article class="area js-revelar">
+            <div class="area__icone" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M3 20.5h18"/>
+                <path d="M5 20.5V9.2l7-4.7 7 4.7v11.3"/>
+                <path d="M9.5 20.5v-5h5v5"/>
+                <path d="M9.5 11.6h1.2M13.3 11.6h1.2"/>
+              </svg>
+            </div>
+
+            <h3 class="area__titulo">Direito Empresarial e Tributário</h3>
+            <p class="area__texto">
+              Apoio jurídico à rotina da empresa, da constituição à reorganização, e à
+              gestão da carga tributária dentro dos limites da lei.
+            </p>
+
+            <ul class="area__lista">
+              <li>Constituição, alteração e reorganização societária</li>
+              <li>Acordos de sócios e governança</li>
+              <li>Elaboração e revisão de contratos empresariais</li>
+              <li>Planejamento tributário e revisão de enquadramento</li>
+              <li>Defesa em autos de infração e processos administrativos fiscais</li>
+              <li>Recuperação de tributos pagos indevidamente</li>
+              <li>Consultivo contínuo para empresas</li>
+            </ul>
+
+            <a class="link-acao js-whatsapp" href="#contato"
+               data-assunto="Direito Empresarial e Tributário">
+              Falar sobre esta área
+              <svg class="link-acao__seta" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h13M12.5 5.5 19 12l-6.5 6.5"/>
+              </svg>
+            </a>
+          </article>
+
+          <!-- Imobiliário -->
+          <article class="area js-revelar">
+            <div class="area__icone" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M3.5 10.6 12 4l8.5 6.6"/>
+                <path d="M5.6 9.4V20h12.8V9.4"/>
+                <path d="M10 20v-5.2h4V20"/>
+              </svg>
+            </div>
+
+            <h3 class="area__titulo">Direito Imobiliário</h3>
+            <p class="area__texto">
+              Assessoria em operações com imóveis, da análise documental à regularização,
+              para que a negociação não se transforme em litígio.
+            </p>
+
+            <ul class="area__lista">
+              <li>Due diligence e análise documental do imóvel</li>
+              <li>Contratos de compra e venda e de permuta</li>
+              <li>Contratos de locação residencial e comercial</li>
+              <li>Ações de despejo, cobrança e revisionais</li>
+              <li>Usucapião e regularização de matrícula</li>
+              <li>Questões condominiais</li>
+              <li>Incorporação imobiliária e loteamentos</li>
+            </ul>
+
+            <a class="link-acao js-whatsapp" href="#contato"
+               data-assunto="Direito Imobiliário">
+              Falar sobre esta área
+              <svg class="link-acao__seta" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h13M12.5 5.5 19 12l-6.5 6.5"/>
+              </svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         LEGALTECH  (faixa escura — serviço de tecnologia, B2B)
+         ======================================================== -->
+    <section class="legaltech" id="legaltech">
+      <div class="container legaltech__inner">
+        <div class="legaltech__intro js-revelar">
+          <p class="olho olho--claro">Legaltech &middot; serviço de tecnologia</p>
+          <h2 class="legaltech__titulo">
+            Software sob medida para escritórios de advocacia
+          </h2>
+          <p class="legaltech__texto">
+            Além da advocacia, Samuel Quirino desenvolve sistemas para o setor jurídico.
+            É uma frente <strong>independente da atividade advocatícia</strong>, dirigida a
+            escritórios e departamentos jurídicos que querem trocar planilha e retrabalho
+            por processo automatizado — construída por quem conhece a rotina por dentro.
+          </p>
+        </div>
+
+        <div class="legaltech__blocos">
+          <article class="bloco-tech js-revelar">
+            <h3>Gestão de prazos e processos</h3>
+            <p>
+              Painéis de acompanhamento, alertas de prazo e histórico por processo,
+              no formato que o seu escritório já usa.
+            </p>
+          </article>
+
+          <article class="bloco-tech js-revelar">
+            <h3>Automação de documentos</h3>
+            <p>
+              Geração de petições, contratos e procurações a partir de modelos,
+              eliminando o copiar-e-colar entre arquivos.
+            </p>
+          </article>
+
+          <article class="bloco-tech js-revelar">
+            <h3>Integrações e captura de dados</h3>
+            <p>
+              Conexão com tribunais, sistemas internos e ferramentas de terceiros,
+              para os dados chegarem sem digitação manual.
+            </p>
+          </article>
+
+          <article class="bloco-tech js-revelar">
+            <h3>Sites e portais do cliente</h3>
+            <p>
+              Presença digital e áreas de acompanhamento onde o cliente do escritório
+              consulta o andamento do próprio caso.
+            </p>
+          </article>
+        </div>
+
+        <div class="legaltech__cta js-revelar">
+          <p>Quer avaliar o que dá para automatizar no seu escritório?</p>
+          <a class="botao botao--ouro js-whatsapp" href="#contato"
+             data-assunto="desenvolvimento de software para escritórios (Legaltech)">
+            Conversar sobre um projeto
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         EQUIPE
+         ======================================================== -->
+    <section class="secao" id="equipe">
+      <div class="container">
+        <div class="secao__cabecalho secao__cabecalho--centro js-revelar">
+          <p class="olho">Equipe</p>
+          <h2 class="secao__titulo">Quem conduz o trabalho</h2>
+          <p class="secao__apoio">
+            Uma equipe pequena, para que cada caso tenha responsável definido.
+          </p>
+        </div>
+
+        <ul class="equipe">
+          <li class="membro js-revelar">
+            <span class="membro__avatar" aria-hidden="true">SQ</span>
+            <h3 class="membro__nome">Samuel Quirino</h3>
+            <p class="membro__cargo">CEO &middot; Advogado fundador</p>
+            <p class="membro__bio">
+              Advogado há três anos, com atuação em Direito Empresarial, Tributário e
+              Imobiliário. Responde pela direção técnica do escritório e conduz a frente
+              de desenvolvimento de software para o setor jurídico.
+            </p>
+            <p class="membro__oab" data-campo="oab-curto"></p>
+          </li>
+
+          <li class="membro js-revelar">
+            <span class="membro__avatar" aria-hidden="true">DC</span>
+            <h3 class="membro__nome">Danielly Giovana Silva Couto</h3>
+            <p class="membro__cargo">Diretora Geral</p>
+            <p class="membro__bio">
+              Responsável pela gestão do escritório: organização de fluxos, relacionamento
+              com clientes e coordenação da rotina administrativa e financeira.
+            </p>
+          </li>
+
+          <li class="membro js-revelar">
+            <span class="membro__avatar" aria-hidden="true">J</span>
+            <h3 class="membro__nome">Jessica</h3>
+            <p class="membro__cargo">Estagiária de Direito</p>
+            <p class="membro__bio">
+              Apoia a equipe na pesquisa de jurisprudência, no acompanhamento processual e
+              na organização documental dos casos em andamento.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         DÚVIDAS FREQUENTES
+         ======================================================== -->
+    <section class="secao secao--alt" id="duvidas">
+      <div class="container container--estreito">
+        <div class="secao__cabecalho secao__cabecalho--centro js-revelar">
+          <p class="olho">Dúvidas frequentes</p>
+          <h2 class="secao__titulo">Perguntas que costumamos receber</h2>
+          <p class="secao__apoio">
+            Conteúdo informativo. Não substitui a análise do seu caso concreto.
+          </p>
+        </div>
+
+        <div class="faq js-revelar">
+          <details class="faq__item">
+            <summary>Como funciona o primeiro contato com o escritório?</summary>
+            <div class="faq__conteudo">
+              <p>
+                O primeiro contato serve para entender a situação e verificar se ela está
+                dentro das áreas em que o escritório atua. A partir daí é definida a forma
+                de trabalho mais adequada — consultoria pontual, acompanhamento contínuo ou
+                atuação em processo.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>O escritório atende pessoas físicas ou apenas empresas?</summary>
+            <div class="faq__conteudo">
+              <p>
+                Ambos. As demandas empresariais e tributárias envolvem majoritariamente
+                empresas e seus sócios; as questões imobiliárias atendem tanto pessoas
+                físicas quanto incorporadoras, construtoras e administradoras.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Qual a diferença entre atuação consultiva e contenciosa?</summary>
+            <div class="faq__conteudo">
+              <p>
+                Na atuação <strong>consultiva</strong>, o trabalho acontece antes do conflito:
+                análise de contratos, estruturação de operações e pareceres. Na
+                <strong>contenciosa</strong>, o escritório representa o cliente em processo
+                judicial ou administrativo já instaurado. As duas se comunicam — boa
+                consultoria costuma reduzir a necessidade de contencioso.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>É possível ser atendido a distância?</summary>
+            <div class="faq__conteudo">
+              <p>
+                Sim. Reuniões por videoconferência, assinatura eletrônica de documentos e
+                acompanhamento por canais digitais fazem parte da rotina do escritório, o que
+                permite atender clientes de outras cidades.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>O que preciso separar antes de uma reunião sobre imóvel?</summary>
+            <div class="faq__conteudo">
+              <p>
+                Quando houver, ajuda muito ter em mãos a matrícula atualizada do imóvel, o
+                contrato ou proposta já discutida, o IPTU do ano corrente e eventuais
+                notificações recebidas. A ausência desses documentos não impede a conversa
+                inicial.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>O escritório desenvolve software para qualquer empresa?</summary>
+            <div class="faq__conteudo">
+              <p>
+                A frente de Legaltech é dirigida especificamente a escritórios de advocacia e
+                departamentos jurídicos, e é prestada de forma independente da atividade
+                advocatícia. Projetos fora desse escopo são avaliados caso a caso.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         CONTATO
+         ======================================================== -->
+    <section class="secao" id="contato">
+      <div class="container">
+        <div class="secao__cabecalho secao__cabecalho--centro js-revelar">
+          <p class="olho">Contato</p>
+          <h2 class="secao__titulo">Fale com o escritório</h2>
+          <p class="secao__apoio">
+            Descreva a situação em poucas linhas e retornaremos com os próximos passos.
+          </p>
+        </div>
+
+        <ul class="contato">
+          <li class="contato__item js-revelar">
+            <div class="contato__icone" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M20.5 16.9v2.6a1.7 1.7 0 0 1-1.9 1.7 16.9 16.9 0 0 1-7.4-2.6 16.6 16.6 0 0 1-5.1-5.1A16.9 16.9 0 0 1 3.5 6a1.7 1.7 0 0 1 1.7-1.9h2.6a1.7 1.7 0 0 1 1.7 1.5c.1.8.3 1.7.6 2.4a1.7 1.7 0 0 1-.4 1.8l-1.1 1.1a13.6 13.6 0 0 0 5.1 5.1l1.1-1.1a1.7 1.7 0 0 1 1.8-.4c.8.3 1.6.5 2.4.6a1.7 1.7 0 0 1 1.5 1.8z"/>
+              </svg>
+            </div>
+            <h3>Telefone e WhatsApp</h3>
+            <p><a data-campo="telefone-link" href="#">&mdash;</a></p>
+            <p class="contato__nota">Atendimento em horário comercial</p>
+          </li>
+
+          <li class="contato__item js-revelar">
+            <div class="contato__icone" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <rect x="2.8" y="4.8" width="18.4" height="14.4" rx="2.2"/>
+                <path d="m3.4 6.6 8.6 6 8.6-6"/>
+              </svg>
+            </div>
+            <h3>E-mail</h3>
+            <p><a data-campo="email-link" href="#">&mdash;</a></p>
+            <p class="contato__nota">Resposta em até um dia útil</p>
+          </li>
+
+          <li class="contato__item js-revelar">
+            <div class="contato__icone" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 21.2s7-5.4 7-10.4a7 7 0 1 0-14 0c0 5 7 10.4 7 10.4z"/>
+                <circle cx="12" cy="10.6" r="2.6"/>
+              </svg>
+            </div>
+            <h3>Escritório</h3>
+            <p data-campo="endereco">&mdash;</p>
+            <p class="contato__nota" data-campo="horario"></p>
+          </li>
+        </ul>
+
+        <div class="contato__cta js-revelar">
+          <a class="botao botao--primario botao--grande js-whatsapp" href="#"
+             data-assunto="uma orientação jurídica">
+            <svg class="icone-wa" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2.1a9.8 9.8 0 0 0-8.4 14.9L2.2 22l5.1-1.3A9.8 9.8 0 1 0 12 2.1zm5.7 13.9c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.5-1.2-2.9s.7-2 1-2.3c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1.2.1 1.5.7 1.7.8.2.1.4.2.5.3.1.2.1.7-.1 1.3z"/>
+            </svg>
+            Enviar mensagem pelo WhatsApp
+          </a>
+          <p class="contato__aviso">
+            O envio de mensagem não cria, por si só, relação de cliente e advogado. Evite
+            enviar documentos sigilosos antes do primeiro contato.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================
+       RODAPÉ
+       ========================================================== -->
+  <footer class="rodape">
+    <div class="container rodape__inner">
+      <div class="rodape__marca">
+        <span class="marca__monograma marca__monograma--rodape" aria-hidden="true">SQ</span>
+        <p class="rodape__razao" data-campo="razao-social">Samuel Quirino Advocacia</p>
+        <p class="rodape__oab" data-campo="oab"></p>
+        <p class="rodape__cnpj" data-campo="cnpj"></p>
+      </div>
+
+      <nav class="rodape__nav" aria-label="Navegação do rodapé">
+        <h2 class="rodape__titulo">Navegação</h2>
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#areas">Áreas de atuação</a></li>
+          <li><a href="#legaltech">Legaltech</a></li>
+          <li><a href="#equipe">Equipe</a></li>
+          <li><a href="#duvidas">Dúvidas</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="rodape__contato">
+        <h2 class="rodape__titulo">Contato</h2>
+        <ul>
+          <li><a data-campo="telefone-link" href="#">&nbsp;</a></li>
+          <li><a data-campo="email-link" href="#">&nbsp;</a></li>
+          <li data-campo="endereco"></li>
+        </ul>
+        <ul class="rodape__redes" data-campo="redes"></ul>
+      </div>
+    </div>
+
+    <div class="container rodape__base">
+      <p>
+        &copy; <span data-campo="ano">2026</span>
+        <span data-campo="razao-social">Samuel Quirino Advocacia</span>.
+        Todos os direitos reservados.
+      </p>
+      <p class="rodape__disclaimer">
+        Este site tem caráter meramente informativo, em conformidade com o Código de Ética e
+        Disciplina da OAB e com o Provimento n.º 205/2021 do Conselho Federal da OAB. O
+        conteúdo aqui publicado não constitui consulta ou parecer jurídico, nem gera relação
+        de cliente e advogado. Cada caso exige análise individual.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante de WhatsApp -->
+  <a class="wa-flutuante js-whatsapp" id="wa-flutuante" href="#contato"
+     data-assunto="uma orientação jurídica"
+     aria-label="Falar com o escritório pelo WhatsApp" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 2.1a9.8 9.8 0 0 0-8.4 14.9L2.2 22l5.1-1.3A9.8 9.8 0 1 0 12 2.1zm5.7 13.9c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.5-1.2-2.9s.7-2 1-2.3c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1.2.1 1.5.7 1.7.8.2.1.4.2.5.3.1.2.1.7-.1 1.3z"/>
+    </svg>
+  </a>
+
+  <!-- Dados estruturados para buscadores.
+       Ajuste telephone, email e address junto com js/config.js. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "Samuel Quirino Advocacia",
+    "url": "https://samuelquirino.adv.br/",
+    "image": "https://samuelquirino.adv.br/assets/img/og-image.jpg",
+    "description": "Escritório de advocacia com atuação em Direito Empresarial e Tributário e em Direito Imobiliário, e desenvolvimento de software para escritórios de advocacia.",
+    "priceRange": "$$",
+    "founder": {
+      "@type": "Person",
+      "name": "Samuel Quirino",
+      "jobTitle": "Advogado"
+    },
+    "employee": [
+      {
+        "@type": "Person",
+        "name": "Danielly Giovana Silva Couto",
+        "jobTitle": "Diretora Geral"
+      }
+    ],
+    "areaServed": {
+      "@type": "Country",
+      "name": "Brasil"
+    },
+    "knowsAbout": [
+      "Direito Empresarial",
+      "Direito Tributário",
+      "Direito Imobiliário",
+      "Legaltech"
+    ],
+    "openingHours": "Mo-Fr 09:00-18:00"
+  }
+  </script>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

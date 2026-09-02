@@ -1,0 +1,144 @@
+/* ============================================================
+   variables.css — design tokens
+   Para mudar a identidade visual do site, edite ESTE arquivo.
+   ============================================================ */
+
+:root {
+  color-scheme: light;
+
+  /* --- Cores: tema claro ------------------------------------ */
+  --bg:            #FBFAF8;
+  --bg-alt:        #F2F0EC;
+  --surface:       #FFFFFF;
+  --surface-2:     #F7F6F3;
+
+  --ink:           #111827;
+  --ink-soft:      #4B5563;
+  --ink-faint:     #6B7280;
+
+  --brand:         #0F2540;
+  --brand-strong:  #0A1A2E;
+  --brand-soft:    #E7ECF3;
+  --on-brand:      #FFFFFF;
+
+  --accent:        #866226;
+  --accent-strong: #6B4E1D;
+  --accent-soft:   #F5EEE1;
+
+  --line:          #E3E0DA;
+  --line-strong:   #C9C5BC;
+
+  /* Faixa escura (Legaltech) — identica nos dois temas */
+  --dark-bg:       #0B1220;
+  --dark-surface:  #141D2E;
+  --dark-ink:      #E8EAF0;
+  --dark-ink-soft: #A2AEC4;
+  --dark-line:     #24304A;
+  --dark-accent:   #D9B36B;
+
+  --success:       #1F7A4D;
+  --focus:         #2563EB;
+
+  /* --- Tipografia ------------------------------------------- */
+  --font-serif: "Lora", Georgia, "Times New Roman", serif;
+  --font-sans:  "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --fs-xs:   0.8125rem;
+  --fs-sm:   0.9375rem;
+  --fs-base: 1rem;
+  --fs-md:   1.0625rem;
+  --fs-lg:   clamp(1.125rem, 0.4vw + 1.05rem, 1.25rem);
+  --fs-xl:   clamp(1.375rem, 1vw + 1.15rem, 1.75rem);
+  --fs-2xl:  clamp(1.75rem, 2vw + 1.3rem, 2.5rem);
+  --fs-3xl:  clamp(2.25rem, 3.5vw + 1.4rem, 3.75rem);
+
+  --lh-tight: 1.15;
+  --lh-base:  1.65;
+
+  --ls-wide:  0.08em;
+  --ls-caps:  0.14em;
+
+  /* --- Espacamento (escala 4px) ----------------------------- */
+  --sp-1:  0.25rem;
+  --sp-2:  0.5rem;
+  --sp-3:  0.75rem;
+  --sp-4:  1rem;
+  --sp-5:  1.5rem;
+  --sp-6:  2rem;
+  --sp-7:  2.5rem;
+  --sp-8:  3rem;
+  --sp-9:  4rem;
+  --sp-10: 5rem;
+  --sp-11: 7rem;
+
+  --section-y: clamp(3.5rem, 8vw, 7rem);
+
+  /* --- Layout ----------------------------------------------- */
+  --container:      1180px;
+  --container-text: 68ch;
+  --gutter:         clamp(1.25rem, 5vw, 3rem);
+  --header-h:       68px;
+
+  /* --- Formas e sombras ------------------------------------- */
+  --radius-sm: 4px;
+  --radius:    8px;
+  --radius-lg: 14px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(15, 37, 64, 0.06),
+               0 1px 3px rgba(15, 37, 64, 0.04);
+  --shadow:    0 4px 12px rgba(15, 37, 64, 0.07),
+               0 2px 4px rgba(15, 37, 64, 0.04);
+  --shadow-lg: 0 18px 40px rgba(15, 37, 64, 0.12),
+               0 4px 10px rgba(15, 37, 64, 0.06);
+
+  /* --- Movimento -------------------------------------------- */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 140ms;
+  --dur:      240ms;
+  --dur-slow: 520ms;
+
+  /* --- Camadas ---------------------------------------------- */
+  --z-header: 100;
+  --z-menu:   110;
+  --z-float:  120;
+}
+
+/* ============================================================
+   Tema escuro
+   Aplicado por [data-theme="dark"] (escolha manual persistida)
+   ou por prefers-color-scheme quando nao houver escolha salva.
+   ============================================================ */
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg:            #0E1420;
+  --bg-alt:        #121A29;
+  --surface:       #161E2E;
+  --surface-2:     #1C2637;
+
+  --ink:           #E8EAF0;
+  --ink-soft:      #B4BECE;
+  --ink-faint:     #8E9AAE;
+
+  --brand:         #8FB4E0;
+  --brand-strong:  #B0CCEC;
+  --brand-soft:    #1B2942;
+  --on-brand:      #0B1220;
+
+  --accent:        #D9B36B;
+  --accent-strong: #E7C88C;
+  --accent-soft:   #2A2317;
+
+  --line:          #263149;
+  --line-strong:   #384765;
+
+  --success:       #4ED08B;
+  --focus:         #7FA8D9;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow:    0 4px 14px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 20px 44px rgba(0, 0, 0, 0.55);
+}
